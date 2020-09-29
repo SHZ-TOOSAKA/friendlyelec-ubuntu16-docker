@@ -32,25 +32,10 @@ RUN echo "root:fa" | chpasswd
 USER root
 
 # install qt-sdk
-COPY ./files/qtsdk-friendlyelec/s5p4418 /qtsdk-friendlyelec/s5p4418
-RUN echo "> install QtSDK for s5p4418"; \
-    cd /qtsdk-friendlyelec/s5p4418/; chmod 755 install.sh; ./install.sh
-
-COPY ./files/qtsdk-friendlyelec/s5p6818 /qtsdk-friendlyelec/s5p6818
-RUN echo "> install QtSDK for s5p6818"; \
-    cd /qtsdk-friendlyelec/s5p6818/; chmod 755 install.sh; ./install.sh
-
-COPY ./files/qtsdk-friendlyelec/s905 /qtsdk-friendlyelec/s905
-RUN echo "> install QtSDK for s905"; \
-    cd /qtsdk-friendlyelec/s905/; chmod 755 install.sh; ./install.sh
 
 COPY ./files/qtsdk-friendlyelec/h3 /qtsdk-friendlyelec/h3
 RUN echo "> install QtSDK for allwinne h3/h5"; \
     cd /qtsdk-friendlyelec/h3/; chmod 755 install.sh; ./install.sh
-
-COPY ./files/qtsdk-friendlyelec/rk3399-lubuntu /qtsdk-friendlyelec/rk3399-lubuntu
-RUN echo "> install QtSDK for rk3399-lubuntu"; \
-    cd /qtsdk-friendlyelec/rk3399-lubuntu/; chmod 755 install.sh; ./install.sh
 
 RUN rm -rf /qtsdk-friendlyelec
 
