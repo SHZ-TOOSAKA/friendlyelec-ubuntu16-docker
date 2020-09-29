@@ -33,7 +33,7 @@ USER root
 
 # install qt-sdk
 
-COPY ./files/qtsdk-friendlyelec/h3 /qtsdk-friendlyelec/h3
+COPY ./files /qtsdk-friendlyelec/h3
 RUN echo "> install QtSDK for allwinne h3/h5"; \
     cd /qtsdk-friendlyelec/h3/; chmod 755 install.sh; ./install.sh
 
